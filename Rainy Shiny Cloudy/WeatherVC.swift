@@ -36,25 +36,33 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         locationManager.startMonitoringSignificantLocationChanges()
             
         currentWeather = CurrentWeather()
-        currentWeather.downloadWeatherDetails{
-            self.downloadForecastData{
-                self.updateMainUI()
-            }
         }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        locationAuthStatus()
     }
     
     func locationAuthStatus(){
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{
             currentLocation = locationManager.location
+            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            currentWeather.downloadWeatherDetails{
+                self.downloadForecastData{
+                    self.updateMainUI()
+                }
+            }
+            print(currentLocation.coordinate.latitude,currentLocation.coordinate.longitude)
         }else {
             locationManager.requestWhenInUseAuthorization()
+            locationAuthStatus()
         }
     }
     
     func downloadForecastData(completed: @escaping DownloadComplete){
         //Downloading forecast weather data for Tableview
-        let forecastURL = URL(string: CURRENT_FORECAST_URL)!
-        Alamofire.request(forecastURL).responseJSON {response in
+        //let forecastURL = URL(string: CURRENT_FORECAST_URL)!
+        Alamofire.request(CURRENT_FORECAST_URL).responseJSON {response in
             let result = response.result
             
             if let dict = result.value as? Dictionary<String, AnyObject>{

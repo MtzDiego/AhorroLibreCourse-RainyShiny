@@ -21,6 +21,7 @@
 		FABA410A1E5D090E007BD46A /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA41091E5D090E007BD46A /* CurrentWeather.swift */; };
 		FAF9D1191E5E18460069BAF4 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9D1181E5E18460069BAF4 /* Forecast.swift */; };
 		FAF9D11B1E5E2A9A0069BAF4 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9D11A1E5E2A9A0069BAF4 /* WeatherCell.swift */; };
+		FAF9D11D1E5E3A810069BAF4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9D11C1E5E3A810069BAF4 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		FABA41091E5D090E007BD46A /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		FAF9D1181E5E18460069BAF4 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		FAF9D11A1E5E2A9A0069BAF4 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		FAF9D11C1E5E3A810069BAF4 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FBF9887D1220E9C59ECD5493 /* Pods-Rainy Shiny CloudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rainy Shiny CloudyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rainy Shiny CloudyTests/Pods-Rainy Shiny CloudyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 				FABA41091E5D090E007BD46A /* CurrentWeather.swift */,
 				FAF9D1181E5E18460069BAF4 /* Forecast.swift */,
 				FAF9D11A1E5E2A9A0069BAF4 /* WeatherCell.swift */,
+				FAF9D11C1E5E3A810069BAF4 /* Location.swift */,
 			);
 			path = "Rainy Shiny Cloudy";
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				FABA410A1E5D090E007BD46A /* CurrentWeather.swift in Sources */,
 				FABA41081E5D05F1007BD46A /* Constants.swift in Sources */,
 				FAF9D1191E5E18460069BAF4 /* Forecast.swift in Sources */,
+				FAF9D11D1E5E3A810069BAF4 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
