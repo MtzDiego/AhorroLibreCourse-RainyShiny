@@ -1,0 +1,6 @@
+framework module Pods_Rainy_Shiny_CloudyTests {
+  umbrella header "Pods-Rainy Shiny CloudyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
